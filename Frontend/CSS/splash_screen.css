@@ -1,0 +1,239 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff7700;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.local-hub {
+    font-size: 14px;
+    font-weight: normal;
+    color: #fff8e7;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(9, 9, 9);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.login-btn,
+.sell-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn {
+    background-color: white;
+    color: #ff7700;
+    border: 2px solid white;
+}
+
+.login-btn:hover {
+    background-color: #ffe0cc;
+}
+
+.sell-btn {
+    background-color: #000;
+    color: white;
+    border: 2px solid black;
+}
+
+.sell-btn:hover {
+    background-color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-image img {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Typing Animation for Tagline */
+.tagline {
+    font-size: 24px;
+    color: #0c11ac;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    margin: 20px auto 0;
+    text-align: center;
+    animation: typing 4s steps(30, end) infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 100%;
+    }
+
+    60% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+/* Salesman Container Layout */
+.salesman-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sales-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.sales-text h1 {
+    margin-bottom: 10px;
+    font-size: 42px;
+}
+
+.sales-text h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.gst-info {
+    font-size: 20px;
+    color: #020202;
+    margin-top: 10px;
+}
+
+.gst-info a {
+    color: #ff00cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.gst-info a:hover {
+    text-decoration: underline;
+}
+
+.sales-man-img {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .buttons {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .hero-image img {
+        max-width: 90%;
+    }
+
+    .salesman-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sales-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .sales-text h1 {
+        font-size: 32px;
+    }
+
+    .sales-man-img {
+        max-width: 90%;
+        margin-top: 20px;
+    }
+}
+
