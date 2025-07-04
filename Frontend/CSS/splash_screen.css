@@ -7,7 +7,8 @@
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: rgb(239, 212, 215);
+    color: #333;
 }
 
 /* Navbar Styles */
@@ -69,8 +70,7 @@ body {
     margin-top: 10px;
 }
 
-.login-btn,
-.sell-btn {
+.login-btn, .sell-btn {
     padding: 8px 16px;
     border: none;
     border-radius: 5px;
@@ -126,21 +126,10 @@ body {
 }
 
 @keyframes typing {
-    0% {
-        width: 0;
-    }
-
-    40% {
-        width: 100%;
-    }
-
-    60% {
-        width: 100%;
-    }
-
-    100% {
-        width: 0;
-    }
+    0% { width: 0; }
+    40% { width: 100%; }
+    60% { width: 100%; }
+    100% { width: 0; }
 }
 
 /* Salesman Container Layout */
@@ -189,6 +178,117 @@ body {
     width: 100%;
 }
 
+/* How Bharat Bazaar Works Section */
+.how-it-works {
+    padding: 60px 20px;
+    background-color: rgb(239, 212, 215);
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 32px;
+    color: #000000fd;
+    margin-bottom: 40px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.step {
+    flex: 1 1 220px;
+    max-width: 250px;
+    background: #D6E3DF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step-icon {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.step h4 {
+    margin-bottom: 10px;
+    color: #000000;
+    font-size: 20px;
+}
+
+.step p {
+    color: #21008d;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Supplier Section for Points & Text */
+.supplier-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.supplier-left, .supplier-right {
+    flex: 1 1 45%;
+    max-width: 500px;
+}
+
+.points-box {
+    background: #EFE4D3;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Point Animation Styles */
+.point {
+    margin-bottom: 45px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.point.visible {
+    opacity: 1;
+    transform: translateY(8);
+}
+
+.point h4 {
+    color: #9c20a2;
+    margin-bottom: 20px;
+}
+
+.point p {
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.supplier-right h1 {
+    font-size: 30px;
+    color: #0d000b;
+    margin-bottom: 100px;
+}
+
+.supplier-right h3 {
+    color: #332333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
@@ -235,5 +335,22 @@ body {
         max-width: 90%;
         margin-top: 20px;
     }
-}
 
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        max-width: 90%;
+    }
+
+    .supplier-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .supplier-left, .supplier-right {
+        max-width: 90%;
+    }
+}
