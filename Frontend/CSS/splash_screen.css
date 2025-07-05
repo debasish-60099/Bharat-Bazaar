@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/** Reset and Base Styles **/
 * {
     margin: 0;
     padding: 0;
@@ -11,12 +11,12 @@ body {
     color: #333;
 }
 
-/* Navbar Styles */
+/** Navbar Styles **/
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ff7700;
+    background-color: #cdf2ec;
     padding: 15px 30px;
     flex-wrap: wrap;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -25,7 +25,7 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    color: white;
+    color: rgb(250, 168, 5);
     font-weight: bold;
     font-size: 20px;
     line-height: 1.2;
@@ -39,7 +39,7 @@ body {
 .local-hub {
     font-size: 14px;
     font-weight: normal;
-    color: #fff8e7;
+    color: rgb(250, 168, 5);;
 }
 
 .nav-links {
@@ -61,7 +61,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #ffffff;
+    color: #004fe1;
 }
 
 .buttons {
@@ -86,11 +86,12 @@ body {
 }
 
 .login-btn:hover {
-    background-color: #ffe0cc;
+    background-color: #2b01c6;
+    color: #ffffff;
 }
 
 .sell-btn {
-    background-color: #000;
+    background-color: #03247e;
     color: white;
     border: 2px solid black;
 }
@@ -99,7 +100,7 @@ body {
     background-color: #333;
 }
 
-/* Hero Section */
+/** Hero Section **/
 .hero-section {
     text-align: center;
     padding: 40px 20px;
@@ -112,7 +113,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Typing Animation for Tagline */
 .tagline {
     font-size: 24px;
     color: #0c11ac;
@@ -132,7 +132,7 @@ body {
     100% { width: 0; }
 }
 
-/* Salesman Container Layout */
+/** Salesman Section **/
 .salesman-container {
     display: flex;
     align-items: center;
@@ -178,7 +178,7 @@ body {
     width: 100%;
 }
 
-/* How Bharat Bazaar Works Section */
+/** How Bharat Bazaar Works Section **/
 .how-it-works {
     padding: 60px 20px;
     background-color: rgb(239, 212, 215);
@@ -196,42 +196,181 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 30px;
+    margin-top: 30px;
 }
 
-.step {
-    flex: 1 1 220px;
-    max-width: 250px;
-    background: #D6E3DF;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+.card {
+    width: 280px;
+    height: 200px;
+    border-radius: 15px;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+    color: white;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.step:hover {
-    transform: translateY(-5px);
+.card:hover {
+    transform: scale(1.05);
 }
 
-.step-icon {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 15px;
+.card::before {
+    content: "";
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -40%;
+    left: -20%;
+    border-radius: 50%;
+    border: 35px solid rgba(255, 255, 255, 0.102);
+    transition: all .8s ease;
+    filter: blur(.5rem);
 }
 
-.step h4 {
+.card:hover::before {
+    width: 140px;
+    height: 140px;
+    top: -30%;
+    left: 50%;
+    filter: blur(0rem);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
     margin-bottom: 10px;
-    color: #000000;
-    font-size: 20px;
 }
 
-.step p {
-    color: #21008d;
+.card-description {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.4;
+}
+.step-number {
+  background: white;
+  color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+/** Grow Business Section - Card on Right, Heading on Left **/
+.grow-business-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 60px 20px;
+    background-color: rgb(239, 212, 215);
+    flex-wrap: wrap;
 }
 
-/* Supplier Section for Points & Text */
+.grow-left {
+    flex: 1 1 45%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.grow-left h1 {
+    font-size: 45px;
+    color: #05050e;
+    line-height: 1.5;
+    
+}
+
+.grow-right {
+    flex: 1 1 45%;
+    max-width: 500px;
+}
+
+.grow-card {
+    width: 100%;
+    background: rgba(105, 13, 197, 0.103);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+    color: aliceblue;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.grow-card::before {
+    content: "";
+    height: 500px;
+    width: 120px;
+    position: absolute;
+    top: -40%;
+    left: -20%;
+    border-radius: 50%;
+    border: 35px solid rgba(255, 255, 255, 0.102);
+    filter: blur(0.8rem);
+    transition: all 0.6s ease;
+}
+
+.grow-card:hover {
+    transform: scale(1.05);
+}
+
+.grow-card:hover::before {
+    width: 150px;
+    height: 150px;
+    top: -30%;
+    left: 50%;
+    filter: blur(0rem);
+}
+
+.grow-card h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #0e005f;
+}
+
+.grow-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.grow-card li {
+    margin-bottom: 20px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.grow-card li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 16px;
+    color: #ffcc70;
+}
+
+.growth-image {
+    max-width: 200%;
+    max-height: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgb(239, 212, 215);
+}
+
+
+/** Supplier Section **/
 .supplier-section {
     display: flex;
     justify-content: space-around;
@@ -253,7 +392,6 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Point Animation Styles */
 .point {
     margin-bottom: 45px;
     opacity: 0;
@@ -289,7 +427,165 @@ body {
     font-size: 16px;
 }
 
-/* Responsive Design */
+.faq-section {
+    padding: 50px 20px;
+    background-color: #efe4d3;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.faq-section h2 {
+    font-size: 32px;
+    color: #0c11ac;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    text-align: left;
+    margin-bottom: 25px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.faq-item h3 {
+    color: #ff7700;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+#seeMoreBtn {
+    background-color: #ff7700;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#seeMoreBtn:hover {
+    background-color: #e06600;
+}
+
+.faq-btn {
+    padding: 10px 20px;
+    background-color: #0c11ac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-btn:hover {
+    background-color: #080c7a;
+}
+
+.support-section {
+    background-color: #c2dade;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 60px auto;
+    max-width: 2z000px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease;
+}
+
+.support-section h2 {
+    font-size: 28px;
+    color: #111589;
+    margin-bottom: 20px;
+}
+
+.support-section p {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.support-contact h3 {
+    font-size: 20px;
+    color: #88298d;
+    margin-bottom: 10px;
+}
+
+.support-email {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ac0c74;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.support-email:hover {
+    background-color: #080c7a;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.splash-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    font-size: 12px;
+    color: #000000;
+    background-color: rgb(239, 212, 215);
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-center {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.splash-footer a {
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+/** Responsive Design **/
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -341,10 +637,6 @@ body {
         align-items: center;
     }
 
-    .step {
-        max-width: 90%;
-    }
-
     .supplier-section {
         flex-direction: column;
         align-items: center;
@@ -353,4 +645,26 @@ body {
     .supplier-left, .supplier-right {
         max-width: 90%;
     }
+
+    .card {
+        width: 90%;
+    }
+
+    .grow-business-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grow-left, .grow-right {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .grow-left h1 {
+        font-size: 28px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }

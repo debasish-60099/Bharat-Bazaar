@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgb(248, 232, 234);
+    padding: 40px 50px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-form, .right-info {
+    width: 45%;
+}
+
+.left-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.left-form p {
+    font-size: 14px;
+    color: #7c7c7c;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.create-account-btn {
+    background: #7e22ce;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.checkbox-label {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-label input {
+    margin-right: 8px;
+}
+
+.terms {
+    font-size: 12px;
+    color: #555;
+}
+
+.terms a {
+    color: #7e22ce;
+    text-decoration: underline;
+}
+
+.right-info h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.right-info li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.right-info ul {
+    padding-left: 20px;
+}
+
+.right-info h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.login-link {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #7e22ce;
+    text-decoration: none;
+    margin-left: 5px;
+}
+.login-btn {
+    background-color: rgb(11, 1, 213);
+    color: #f7f7fd;
+    border: 2px solid white;
+}
+
+.login-btn:hover {
+    background-color: #2b01c6;
+    color: #ffffff;
+}
