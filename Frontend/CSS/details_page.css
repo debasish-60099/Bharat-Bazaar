@@ -20,18 +20,18 @@ body {
 
 .left-section {
     width: 65%;
+    height: 100%;
     padding: 2rem;
-    background-color: #ece8e8;
-    border-right: 1px solid #9e3131;
+    background-color: #ececec;
+    border-right: 1px solid #ddd;
     overflow-y: auto;
 }
 
 .right-section {
-    width:65%;
+    width: 35%;
     padding: 2rem;
-    background-color: #efd5d5;
+    background-color: #ffffff;
     overflow-y: auto;
-    height: 78%;
 }
 
 /* Progress Bar */
@@ -64,7 +64,7 @@ body {
 
 /* Sections */
 .section {
-    background: #efd5d5;
+    background: #fdf2f2;
     padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 2rem;
