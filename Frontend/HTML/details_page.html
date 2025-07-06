@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharat Bazaar Details - Step Form</title>
+<link rel="stylesheet" href="../CSS/details_page.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Left Section -->
+    <div class="left-section">
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="step-indicator active">1</div>
+            <div class="line"></div>
+            <div class="step-indicator">2</div>
+            <div class="line"></div>
+            <div class="step-indicator">3</div>
+            <div class="line"></div>
+            <div class="step-indicator">4</div>
+        </div>
+
+        <h2>Register yourself in the <span style="color: rgb(248, 84, 2);">Bharat Bazaar</span> local hub</h2>
+
+        <!-- Step 1: Tax Details -->
+        <div class="section step" id="tax-section">
+            <h3>Choose your Tax option</h3>
+
+            <div class="option-group">
+                <input type="radio" name="taxOption" id="uinOption" checked>
+                <label for="uinOption">Enrolment ID/UIN (for Non-GST sellers)</label>
+            </div>
+            <div class="form-box" id="uinForm">
+                <h4>Register with Enrolment ID / UIN and sell locally in your registered state without GST.</h4>
+                <input type="text" placeholder="Enter your UIN/Enrolment ID">
+                <br>
+                <button class="verify-btn">Verify</button>
+                <br>
+                <a class="learn-link" href="https://cleartax.in/s/uin-unique-identification-number" target="_blank">Learn how to get it & Apply now</a>
+            </div>
+
+            <div class="option-group">
+                <input type="radio" name="taxOption" id="gstOption">
+                <label for="gstOption">GSTIN number (For Regular & Composition GST sellers)</label>
+            </div>
+            <div class="form-box" id="gstForm" style="display: none;">
+                <input type="text" placeholder="Enter your GSTIN Number">
+                <br>
+                <button class="submit-btn">Submit</button>
+            </div>
+
+            <button class="next-btn">Next</button>
+        </div>
+
+        <!-- Step 2: Pickup Address -->
+        <div class="section step" id="pickup-section" style="display: none;">
+            <h3>Pickup Address</h3>
+            <input type="text" placeholder="Full Address" required>
+            <input type="text" placeholder="City" required>
+            <input type="text" placeholder="Pincode" required>
+            <input type="text" placeholder="State" required>
+            <br>
+            <button class="next-btn">Next</button>
+        </div>
+
+        <!-- Step 3: Bank Details -->
+        <div class="section step" id="bank-section" style="display: none;">
+            <h3>Bank Details</h3>
+            <input type="text" placeholder="Account Holder Name" required>
+            <input type="text" placeholder="Bank Name" required>
+            <input type="text" placeholder="Account Number" required>
+            <input type="text" placeholder="IFSC Code" required>
+            <br>
+            <button class="next-btn">Next</button>
+        </div>
+
+        <!-- Step 4: Supplier Details -->
+        <div class="section step" id="supplier-section" style="display: none;">
+            <h3>Supplier Details</h3>
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Phone Number" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Brief Description About You" rows="4"></textarea>
+            <br>
+            <button class="submit-btn">Finish Registration</button>
+        </div>
+
+    </div>
+
+    <!-- Right Section: Dynamic FAQ -->
+    <div class="right-section">
+        <div class="faq-box" id="faqBox">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item">
+                <strong>Q:</strong> What is Enrolment ID/UIN?<br>
+                <strong>A:</strong> It's provided to non-GST sellers who wish to sell locally within their state without GST.
+            </div>
+            <div class="faq-item">
+                <strong>Q:</strong> Who can use Enrolment ID/UIN?<br>
+                <strong>A:</strong> Sellers supplying exempt goods or below the GST turnover threshold within their state.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// Step Handling
+const steps = document.querySelectorAll('.step');
+const nextBtns = document.querySelectorAll('.next-btn');
+const faqBox = document.getElementById('faqBox');
+const progressSteps = document.querySelectorAll('.step-indicator');
+const uinOption = document.getElementById('uinOption');
+const gstOption = document.getElementById('gstOption');
+const uinForm = document.getElementById('uinForm');
+const gstForm = document.getElementById('gstForm');
+
+let currentStep = 0;
+
+nextBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        steps[currentStep].style.display = 'none';
+        progressSteps[currentStep].classList.remove('active');
+        currentStep++;
+        if (steps[currentStep]) {
+            steps[currentStep].style.display = 'block';
+            progressSteps[currentStep].classList.add('active');
+            updateFAQ(currentStep);
+        }
+    });
+});
+
+uinOption.addEventListener('change', () => {
+    uinForm.style.display = 'block';
+    gstForm.style.display = 'none';
+    updateFAQ(0);
+});
+
+gstOption.addEventListener('change', () => {
+    uinForm.style.display = 'none';
+    gstForm.style.display = 'block';
+    updateFAQ(0);
+});
+
+function updateFAQ(step) {
+    switch (step) {
+        case 0:
+            faqBox.innerHTML = uinOption.checked ? `
+                <h3>Frequently Asked Questions - Tax Details</h3>
+                <div class="faq-item">
+                    <strong>Q:</strong> What is Enrolment ID/UIN?<br>
+                    <strong>A:</strong> Provided to non-GST sellers to sell within their state without GST.
+                </div>
+                <div class="faq-item">
+                    <strong>Q:</strong> Who can use Enrolment ID/UIN?<br>
+                    <strong>A:</strong> Sellers with exempt goods or below GST turnover threshold within their state.
+                </div>
+                <div class="faq-item">
+                    <strong>Q:</strong> Can I change my tax option later?<br>
+                    <strong>A:</strong> Yes, update your tax option anytime from your seller dashboard.
+                </div>` 
+            : `
+                <h3>Frequently Asked Questions - Tax Details</h3>
+                <div class="faq-item">
+                    <strong>Q:</strong> What is GSTIN?<br>
+                    <strong>A:</strong> GSTIN is a unique 15-digit number for sellers registered under GST.
+                </div>
+                <div class="faq-item">
+                    <strong>Q:</strong> Who needs GSTIN?<br>
+                    <strong>A:</strong> Sellers dealing with taxable goods or supplying interstate must obtain GSTIN.
+                </div>
+                <div class="faq-item">
+                    <strong>Q:</strong> Where to apply for GSTIN?<br>
+                    <strong>A:</strong> You can apply via <a href="https://www.gst.gov.in/" target="_blank">GST Portal</a>.
+                </div>`;
+            break;
+        case 1:
+            faqBox.innerHTML = `
+                <h3>Frequently Asked Questions - Pickup Address</h3>
+                <div class="faq-item">
+                    <strong>Q:</strong> Why is Pickup Address required?<br>
+                    <strong>A:</strong> Your orders will be picked up from this address for shipping.
+                </div>
+                <div class="faq-item">
+                    <strong>Q:</strong> Can I provide multiple addresses?<br>
+                    <strong>A:</strong> Yes, multiple pickup locations can be added after registration.
+                </div>
+                <div class="faq-item">
+                    <strong>Q:</strong> Can I change the Pickup Address later?<br>
+                    <strong>A:</strong> Yes, update or modify your address anytime from your account.
+                </div>`;
+            break;
+        case 2:
+            faqBox.innerHTML = `
+                <h3>Frequently Asked Questions - Bank Details</h3>
+                <div class="faq-item">
+                    <strong>Q:</strong> Why provide bank details?<br>
+                    <strong>A:</strong> Payments from your orders will be transferred directly to this account.
+                </div>
+                <div class="faq-item">
+                    <strong>Q:</strong> Is my bank information safe?<br>
+                    <strong>A:</strong> Yes, Bharat Bazaar uses bank-grade encryption to keep your details secure.
+                </div>
+                <div class="faq-item">
+                    <strong>Q:</strong> Can I update bank details later?<br>
+                    <strong>A:</strong> Yes, update or change them anytime from your dashboard.
+                </div>`;
+            break;
+        case 3:
+            faqBox.innerHTML = `
+                <h3>Frequently Asked Questions - Supplier Details</h3>
+                <div class="faq-item">
+                    <strong>Q:</strong> Why provide supplier details?<br>
+                    <strong>A:</strong> Helps build buyer trust and ensures verification of your identity.
+                </div>
+                <div class="faq-item">
+                    <strong>Q:</strong> Are phone and email mandatory?<br>
+                    <strong>A:</strong> Yes, for communication, order updates, and notifications.
+                </div>
+                <div class="faq-item">
+                    <strong>Q:</strong> Can I edit my supplier details?<br>
+                    <strong>A:</strong> Yes, update your profile anytime from your account settings.
+                </div>`;
+            break;
+    }
+}
+</script>
+
+</body>
+</html>

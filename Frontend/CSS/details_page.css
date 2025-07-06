@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f2f4f8;
+    color: #333;
+    height: 100vh;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.left-section {
+    width: 65%;
+    padding: 2rem;
+    background-color: #ece8e8;
+    border-right: 1px solid #9e3131;
+    overflow-y: auto;
+}
+
+.right-section {
+    width:65%;
+    padding: 2rem;
+    background-color: #efd5d5;
+    overflow-y: auto;
+    height: 78%;
+}
+
+/* Progress Bar */
+.progress-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.step-indicator {
+    width: 30px;
+    height: 30px;
+    background: #bcbcbc;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-indicator.active {
+    background-color: #240ed1;
+}
+
+.line {
+    flex: 1;
+    height: 2px;
+    background: #ccc;
+}
+
+/* Sections */
+.section {
+    background: #efd5d5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.section h3 {
+    margin-bottom: 1rem;
+}
+
+.option-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.option-group input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.option-group input[type="radio"]:checked {
+    border-color: #6bacf2;
+    background-color: #035dbd;
+}
+
+.form-box, .section input, .section textarea {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.section input, .section textarea {
+    width: 60%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.verify-btn, .submit-btn, .next-btn {
+    padding: 0.5rem 1.2rem;
+    background-color: #0127bf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.learn-link {
+    display: block;
+    margin-top: 0.5rem;
+    color: #020288;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.faq-box {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.faq-box h3 {
+    margin-bottom: 1rem;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-section, .right-section {
+        width: 100%;
+    }
+    .section input, .section textarea {
+        width: 90%;
+    }
+    .progress-bar {
+        justify-content: space-between;
+    }
+    .line {
+        display: none;
+    }
+}
