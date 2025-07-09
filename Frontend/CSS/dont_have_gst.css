@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #e8c67e, #f03aaa);
+    padding: 15px 30px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.local-hub {
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(0, 0, 0);;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(9, 9, 9);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #004fe1;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.login-btn, .sell-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn {
+    background-color: white;
+    color: #ff7700;
+    border: 2px solid white;
+}
+
+.login-btn:hover {
+    background-color: #2b01c6;
+    color: #ffffff;
+}
+
+.sell-btn {
+    background-color: #03247e;
+    color: white;
+    border: 2px solid black;
+}
+
+.sell-btn:hover {
+    background-color: #333;
+}
+
+/* Hero Section */
+.gst-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 8%;
+  background: linear-gradient(45deg, #aee4fd, #edadf4);
+  flex-wrap: wrap;
+}
+.gst-left {
+  max-width: 50%;
+}
+.gst-left h1 {
+  font-size: 2.8rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+.gst-left p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.cta-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+ background: linear-gradient(45deg, #043c69, #3aa0f0);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.cta-btn:hover {
+  background-color: #f85402;
+}
+.gst-right img {
+  width: 100%;
+  max-width: 450px;
+  image-orientation: rgb(0, 0, 0);
+}
+
+/* Who Can Sell */
+.gst-who {
+  padding: 4rem 8%;
+  background-color: #fff;
+}
+.gst-who h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #03247e;
+}
+.gst-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.gst-card {
+  background: linear-gradient(45deg, #eeaa6a, #eaebec);
+  border-left: 6px solid #f85402;
+  padding: 1.2rem;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+/* Product Grid */
+.gst-allowed {
+  padding: 4rem 8%;
+  background-color: #fdfdfd;
+}
+.gst-allowed h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #03247e;
+}
+.gst-product-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.allowed, .not-allowed {
+  width: 300px;
+}
+.allowed h3, .not-allowed h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.allowed ul li, .not-allowed ul li {
+  background-color: #f7f7f7;
+  margin-bottom: 0.6rem;
+  padding: 0.6rem;
+  border-radius: 5px;
+}
+
+/* Steps Section */
+.gst-steps {
+  padding: 4rem 8%;
+  background-color: #f7f7f7;
+}
+.gst-steps h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #03247e;
+}
+.steps-list {
+  max-width: 600px;
+  margin: auto;
+  padding-left: 1.2rem;
+}
+.steps-list li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 4px solid #f85402;
+}

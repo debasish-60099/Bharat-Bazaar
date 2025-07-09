@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grow with Bharat Bazaar</title>
+  <link rel="stylesheet" href="../CSS/grow_page.css" />
+</head>
+<body>
+
+  <!-- Navbar (your original unchanged) -->
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-text">
+        Bharat Bazaar<br />
+        <span class="local-hub">Local Hub</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a onclick="window.location.href='start_selling.html'">Sell on Bharat Bazaar</a></li>
+      <li><a>How Bharat Bazaar Works</a></li>
+      <li><a href="#">Earning & Costs</a></li>
+      <li><a onclick="window.location.href='grow_page.html'">Grow With Bharat Bazaar</a></li>
+      <li><a id="dont-have-gst">Don't have GST?</a></li>
+    </ul>
+    <div class="buttons">
+      <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+      <button class="sell-btn" onclick="window.location.href='start_selling.html'">Ready to Sell</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="grow-main">
+    <div class="grow-left">
+      <h1>Grow Your Business with <span class="highlight">Bharat Bazaar</span></h1>
+      <p>Sell your products online and reach <span class="highlight-pink">millions of customers</span> through Bharat Bazaar’s powerful selling tools for suppliers.</p>
+
+      <div class="gst-note">
+        <span class="badge-new">New!</span>
+        Don't have a GSTIN or have a Composition GSTIN? You can still sell on Bharat Bazaar. 
+        <a href="#">Click here to know more.</a>
+      </div>
+
+      <div class="phone-input-box">
+        <span class="country-code">+91</span>
+        <input type="tel" placeholder="Enter Your Mobile Number" required />
+        <button class="start-btn" onclick="window.location.href='start_selling.html'">Start Selling</button>
+      </div>
+    </div>
+    <div class="grow-right">
+      <img src="../IMAGES/sales_man.png" alt="Seller" class="seller-img" />
+    </div>
+  </section>
+
+  <!-- Sidebar + Dynamic Content Section -->
+  <section class="grow-dynamic">
+    <div class="sidebar">
+      <div class="sidebar-item" onclick="showContent('ads')">Showcase Your Products</div>
+     
+
+      <div class="sidebar-item" onclick="showContent('smart')">Use Smart Product Recommendation</div>
+     
+
+      <div class="sidebar-item" onclick="showContent('price')">Smart Price Tip</div>
+      
+      <div class="sidebar-item" onclick="showContent('quality')">Quality Insights Panel</div>
+
+      <div class="sidebar-item" onclick="showContent('dispatch')">24-Hour Dispatch</div>
+
+    </div>
+
+    <div class="content-box">
+      <div id="ads" class="content-section active">
+         <div class="sidebar-sub"><h1>How Bharat Bazaar Ads Work</h1></div>
+        <p><h4>Want your products to appear where buyers are actually looking?</h4></p>
+
+         <p>With Bharat Bazaar Ads, your catalogs can rank at the top of search and category pages, just like regular listings—but with an edge. Sponsored products get more visibility, more clicks, and more chances to convert into real orders. And the best part? You only pay when a customer clicks. Simple, smart, and result-driven advertising that helps you grow faster.</p> 
+      </div>
+
+      <div id="smart" class="content-section">
+        <h1>Not sure what to sell next?</h1>
+        
+        <h5>Let Bharat Bazaar guide you. Our Smart Product Recommendation Tool suggests trending and high-demand products based on buyer behavior and marketplace data. This means you’re not just guessing—you’re making informed choices that actually sell.</h5>
+        <ul>
+          <li> Save time, avoid slow-moving stock</li>
+          <li> List smarter, reach more customers</li>
+          <li> Earn faster, grow your business with confidence</li>
+        </ul>
+        <p>Sell what customers want. Watch your orders grow. Because at Bharat Bazaar, smart choices lead to smarter earnings.</p>
+      </div>
+
+      <div id="price" class="content-section">
+        <div class="sidebar-sub"><h1>Offer Competitive Prices</h1></div>
+        <h5>Bharat Bazaar gives you Smart Price Tips to help you stay competitive. By analyzing what similar products are being sold for, we suggest the ideal price point for your catalog.</h5>
+        <p>Right price = More visibility + Higher sales</p>
+      </div>
+
+      <div id="quality" class="content-section">
+        <h1>Quality Insights Panel</h1>
+        <p>Your catalog quality decides your success. With the Quality Insights Panel, you can easily track how your product listings are performing. Get alerts on low-performing images, incomplete product details, or missing attributes—so you can fix them instantly.</p>
+        <ul>
+          <li>🧼 Clean, clear, and complete catalogs attract more buyers and build trust.</li>
+          <li>📊 Better quality = Better ranking.</li>
+        </ul>
+      </div>
+
+      <div id="dispatch" class="content-section">
+        <h1>24-Hour Dispatch</h1>
+        <h4>Dispatch Fast, Win Trust</h4>
+        <p>Customers love quick delivery. Join Bharat Bazaar’s 24-Hour Dispatch program and build strong buyer trust by shipping your orders within one day. Sellers who dispatch quickly are not only rewarded with more visibility but also earn higher customer ratings.</p>
+        <p>🚚 Fast delivery = Happy buyers + Repeat orders.</p>
+
+        <h4>Get Priority in Search Results</h4>
+        <p>Speed sells. When you dispatch your orders within 24 hours, your products get priority in search results across Bharat Bazaar. That means more customers will see your catalogs before others—even if you’re selling the same product.</p>
+        <p>🔥 Quick action = Front-row visibility = More sales.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function showContent(id) {
+      document.querySelectorAll(".content-section").forEach(section => {
+        section.classList.remove("active");
+      });
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+  <section class="grow-business-section">
+    
+    <div class="grow-left">
+        <h1>Take Your Business Beyond Boundaries with <span style="color: rgb(250, 4, 246);">Bharat Bazaar</span></h1>
+        <h5 style="font-size: 16px;color: rgb(61, 20, 61) ">Join thousands of local sellers who are taking their business to new heights with Bharat Bazaar. Reach more customers, manage products with ease, and enjoy a zero-commission platform designed to empower your success — all in one place.  <a href="#grow-with-bharat-bazaar" onclick="window.location.href='grow_page.html'">know more.</a></h5>
+        
+          <img src="../IMAGES/growthgraph_sales.png.jpg" alt="Business Growth Graph" class="growth-image">
+    </div>
+
+    <div class="grow-right">
+        <div class="grow-card">
+            <h1>Grow Your Business with Bharat Bazaar</h1>
+       
+            <ul>
+                <li>Nationwide Reach with Local Focus — Expand beyond your neighborhood and tap into Bharat Bazaar’s vast customer network across India.</li>
+                <li>Zero Commission Model — Keep 100% of your profits with no hidden fees or deductions.</li>
+                <li>Easy Product Management — Effortlessly add, update, and manage products through our user-friendly dashboard.</li>
+                <li>Boost Visibility with Smart Promotions — Access special sales events and platform-wide promotions to increase your product visibility.</li>
+                <li>Logistics Support & Fast Delivery — Partner with reliable delivery services to ensure timely customer deliveries.</li>
+                <li>Real-Time Order Tracking & Notifications — Stay connected with your buyers and track every order instantly.</li>
+                <li>Build Your Brand with Bharat Bazaar — Enhance your credibility and create a strong online presence without heavy marketing expenses.</li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+
+<section class="support-section">
+    <h2>Bharat Bazaar Supplier Support — Available 24/7</h2>
+    <p>Our dedicated support team is always here to resolve your queries and assist you before and after you start your online selling journey with Bharat Bazaar.</p>
+
+    <div class="support-contact">
+        <h3>Email Support</h3>
+        <p>You can reach out to us at:</p>
+        <a href="mailto:example@bharatbazaar.com" class="support-email">example@bharatbazaar.com</a>
+
+    </div>
+</section>
+
+</body>
+</html>
