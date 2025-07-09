@@ -121,7 +121,7 @@ body {
 .cta-btn {
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
- background: linear-gradient(45deg, #043c69, #3aa0f0);
+ background: linear-gradient(45deg, #c928e2, #313436);
   color: white;
   border: none;
   border-radius: 6px;
@@ -132,15 +132,16 @@ body {
   background-color: #f85402;
 }
 .gst-right img {
-  width: 100%;
-  max-width: 450px;
+  width: 150%;
+  max-width: 600px;
   image-orientation: rgb(0, 0, 0);
 }
 
 /* Who Can Sell */
 .gst-who {
-  padding: 4rem 8%;
-  background-color: #fff;
+  padding: 4rem 3%;
+  box-shadow: white;
+background: linear-gradient(45deg, #aee4fd, #edadf4);
 }
 .gst-who h1 {
   font-size: 2rem;
@@ -155,10 +156,11 @@ body {
   justify-content: center;
 }
 .gst-card {
-  background: linear-gradient(45deg, #eeaa6a, #eaebec);
-  border-left: 6px solid #f85402;
+  background-color: #fffdf5;
+  border-left: 6px solid #03247e;
   padding: 1.2rem;
   border-radius: 8px;
+  color: #000000;
   width: 250px;
   box-shadow: 0 0 8px rgba(0,0,0,0.05);
 }
@@ -166,7 +168,7 @@ body {
 /* Product Grid */
 .gst-allowed {
   padding: 4rem 8%;
-  background-color: #fdfdfd;
+  background: linear-gradient(45deg, #aee4fd, #edadf4);
 }
 .gst-allowed h1 {
   text-align: center;
@@ -188,7 +190,8 @@ body {
   margin-bottom: 1rem;
 }
 .allowed ul li, .not-allowed ul li {
-  background-color: #f7f7f7;
+background: linear-gradient(45deg, #f079e8, #a4a5f0);
+color: #000000;
   margin-bottom: 0.6rem;
   padding: 0.6rem;
   border-radius: 5px;
@@ -197,7 +200,7 @@ body {
 /* Steps Section */
 .gst-steps {
   padding: 4rem 8%;
-  background-color: #f7f7f7;
+  background: linear-gradient(45deg, #aee4fd, #edadf4);
 }
 .gst-steps h1 {
   font-size: 2rem;
@@ -205,14 +208,166 @@ body {
   margin-bottom: 2rem;
   color: #03247e;
 }
-.steps-list {
-  max-width: 600px;
-  margin: auto;
-  padding-left: 1.2rem;
+.steps-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
-.steps-list li {
+
+.step-card {
+  background-color: #fffdf5;
+  border-left: 6px solid #03247e;
+  padding: 1.2rem;
+  border-radius: 8px;
+  width: 250px;
+  font-weight: 500;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+.faq-section {
+  background: linear-gradient(45deg, #aee4fd, #edadf4);
+  padding: 3rem 8%;
+}
+
+.faq-section h1 {
+  font-size: 2rem;
+  color: #03247e;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faq-item {
   margin-bottom: 1rem;
-  position: relative;
-  padding-left: 1rem;
-  border-left: 4px solid #f85402;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
+
+.faq-question {
+  width: 100%;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+   background-color: #fffdf5;
+  border-left: 6px solid #03247e;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #ddeff6;
+}
+
+.faq-answer {
+  display: none;
+  padding: 1rem;
+  background-color: #fff8f2;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.faq-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+.support-section {
+     background: linear-gradient(45deg, #aee4fd, #edadf4);
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+  
+    max-width: 2z000px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease;
+}
+
+.support-section h2 {
+    font-size: 28px;
+    color: #111589;
+    margin-bottom: 20px;
+}
+
+.support-section p {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.support-contact h3 {
+    font-size: 20px;
+    color: #88298d;
+    margin-bottom: 10px;
+}
+
+.support-email {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ac0c74;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.support-email:hover {
+    background-color: #080c7a;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.splash-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    font-size: 12px;
+    color: #000000;
+    background-color: rgb(239, 212, 215);
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-center {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.splash-footer a {
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
