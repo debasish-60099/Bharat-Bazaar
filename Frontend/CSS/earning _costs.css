@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #fdfdfd;
+  line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #e8c67e, #f03aaa);
+    padding: 15px 30px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.local-hub {
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(0, 0, 0);;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(9, 9, 9);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #004fe1;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.login-btn, .sell-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn {
+    background-color: white;
+    color: #ff7700;
+    border: 2px solid white;
+}
+
+.login-btn:hover {
+    background-color: #2b01c6;
+    color: #ffffff;
+}
+
+.sell-btn {
+    background-color: #03247e;
+    color: white;
+    border: 2px solid black;
+}
+
+.sell-btn:hover {
+    background-color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 8%;
+  background: linear-gradient(135deg, #fdfdfd, #fff7e6);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-in-out;
+}
+.hero-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-left {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #f85402;
+}
+
+.hero-left p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.cta-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background-color: #f85402;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  background-color: #d94400;
+  transform: scale(1.05);
+}
+
+.hero-right img {
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Highlights */
+.highlights {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 3rem 8%;
+  background: #fff;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-in-out;
+}
+.highlights.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.highlight-card {
+  flex: 1;
+  background: #fff4e8;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.highlight-card:hover {
+  transform: translateY(-5px);
+}
+.highlight-card h3 {
+  color: #f85402;
+  margin-bottom: 0.8rem;
+}
+
+/* Cost Breakdown */
+.cost-breakdown {
+  padding: 3rem 8%;
+  background: #f7f7f7;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-in-out;
+}
+.cost-breakdown.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cost-breakdown h2 {
+  margin-bottom: 2rem;
+  color: #f85402;
+}
+.cost-table {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.column {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  flex: 1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.column:hover {
+  transform: scale(1.03);
+}
+.column h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+.column ul {
+  list-style: none;
+}
+
+/* Calculator */
+.calculator-section {
+  padding: 3rem 8%;
+  text-align: center;
+  background: #fff;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-in-out;
+}
+.calculator-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.calculator-section input {
+  padding: 0.7rem;
+  margin: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 220px;
+}
+.calculator-section button {
+  padding: 0.7rem 1rem;
+  background: #f85402;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.calculator-section button:hover {
+  background: #d94400;
+  transform: scale(1.05);
+}
+.calculator-section p {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* FAQ */
+.faq {
+  padding: 3rem 8%;
+  background: #f7f7f7;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-in-out;
+}
+.faq.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.faq h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #f85402;
+}
+.faq-item {
+  margin-bottom: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 0.8rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+.faq-answer {
+  display: none;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-top: none;
+  background: #fff4e8;
+  border-radius: 0 0 5px 5px;
+  color: #555;
+  transition: 0.3s ease;
+}
+
+/* CTA Banner */
+.cta-banner {
+  padding: 3rem 8%;
+  text-align: center;
+  background: #fff4e8;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-in-out;
+}
+.cta-banner.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cta-banner h2 {
+  margin-bottom: 1rem;
+  color: #f85402;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .highlights {
+    flex-direction: column;
+  }
+  .cost-table {
+    flex-direction: column;
+  }
+}

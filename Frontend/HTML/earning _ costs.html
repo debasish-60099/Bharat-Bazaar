@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earning & Costs - Bharat Bazaar</title>
+  <link rel="stylesheet" href="../CSS/earning _costs.css">
+</head>
+<body>
+
+   <nav class="navbar">
+        <div class="logo">
+            <div class="logo-text">
+                Bharat Bazaar<br>
+                <span class="local-hub">Local Hub</span>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#start_selling.html" onclick="window.location.href='start_selling.html'" >Sell on Bharat Bazaar</a></li>
+            <li><a href="#how-bharat-bazaar-works">How Bharat Bazaar Works</a></li>
+            <li><a href="#earning _costs" onclick="window.location.href='earning%20_%20costs.html'">Earning & Costs</a></li>
+            <li><a href="#grow-with-bharat-bazaar" onclick="window.location.href='grow_page.html'">Grow With Bharat Bazaar</a></li>
+            <li><a href="#dont-have-gst" id="dont-have-gst">Don't have GST?</a></li>
+        </ul>
+
+        <div class="buttons">
+            <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+
+            <button class="sell-btn" onclick="window.location.href='start_selling.html'">Ready to Sell</button>
+        </div>
+    </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section animate">
+    <div class="hero-left">
+      <h1>Maximize Your Earnings on <span class="highlight">Bharat Bazaar</span></h1>
+      <p>Understand your costs, plan your profits, and grow your business with clarity.</p>
+      <button class="cta-btn" onclick="window.location.href='start_selling.html'">Start Selling</button>
+    </div>
+    <div class="hero-right">
+      <img src="../IMAGES/earning _ costs.png" alt="Earnings Growth">
+    </div>
+  </section>
+
+  <!-- Key Highlights -->
+  <section class="highlights animate">
+    <div class="highlight-card">
+      <h3>Zero Joining Fee</h3>
+      <p>Start your business with no upfront cost.</p>
+    </div>
+    <div class="highlight-card">
+      <h3>Low Commission Rates</h3>
+      <p>Pay only when you sell.</p>
+    </div>
+    <div class="highlight-card">
+      <h3>Transparent Policies</h3>
+      <p>No hidden charges, clear breakdowns.</p>
+    </div>
+  </section>
+
+  <!-- Cost Breakdown -->
+  <section class="cost-breakdown animate">
+    <h2>Cost Breakdown</h2>
+    <div class="cost-table">
+      <div class="column">
+        <h3>Costs You Pay</h3>
+        <ul>
+          <li>Commission (2-5% based on category)</li>
+          <li>GST on commission (as applicable)</li>
+          <li>Payment gateway fees</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>What You Earn</h3>
+        <ul>
+          <li>Product Price</li>
+          <li>Minus platform fee</li>
+          <li><strong>= Net Profit</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Earnings Calculator -->
+  <section class="calculator-section animate">
+    <h2>Estimate Your Earnings</h2>
+    <input type="number" id="price" placeholder="Enter product price">
+    <button onclick="calculateEarnings()">Calculate</button>
+    <p id="result"></p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq animate">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-question">How is commission calculated?</button>
+      <div class="faq-answer">Commission depends on your product category and is a small percentage of the selling price.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Are there any hidden charges?</button>
+      <div class="faq-answer">No. Bharat Bazaar ensures full transparency with no hidden costs.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">When do I get paid?</button>
+      <div class="faq-answer">Payments are transferred directly to your bank account within 7 days of order dispatch.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How to increase my earnings?</button>
+      <div class="faq-answer">Optimize product pricing, improve catalog quality, and use Bharat Bazaar Ads.</div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner animate">
+    <h2>Ready to boost your earnings?</h2>
+    <button class="cta-btn" onclick="window.location.href='start_selling.html'">Start Selling Today</button>
+  </section>
+
+  <script>
+    function calculateEarnings() {
+      let price = document.getElementById('price').value;
+      if (price) {
+        let commission = price * 0.05; // 5% commission
+        let net = price - commission - 10; // assumed ₹10 gateway fee
+        document.getElementById('result').innerText = "Your estimated earning: ₹" + net.toFixed(2);
+      } else {
+        document.getElementById('result').innerText = "Please enter a valid price.";
+      }
+    }
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('active');
+        const answer = button.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    // Scroll Animation
+    const sections = document.querySelectorAll('.animate');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.8;
+      sections.forEach(sec => {
+        const sectionTop = sec.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+          sec.classList.add('show');
+        } else {
+          sec.classList.remove('show');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+
+</body>
+</html>
