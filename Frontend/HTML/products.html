@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Bharat Bazaar</title>
+  <link rel="stylesheet" href="../CSS/products.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="sidebar-title">Bharat Bazaar</h2>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <li><a href="earnings.html">Earnings</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="messages.html">Messages</a></li>
+      <li><a href="settings.html">Settings</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Top Navbar -->
+    <nav class="top-nav">
+      <h1>Products</h1>
+      <div class="nav-profile">
+        <img src="../IMAGES/profile_picture.jpg" alt="User Profile">
+        <span>Welcome, Seller</span>
+      </div>
+    </nav>
+
+    <!-- Add Product Form -->
+    <section class="add-product-form">
+      <h2>Add / Edit Product</h2>
+      <form id="productForm">
+        <input type="hidden" id="editIndex">
+        <div class="form-group">
+          <label for="productName">Product Name</label>
+          <input type="text" id="productName" placeholder="Enter product name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price (₹)</label>
+          <input type="number" id="price" placeholder="Enter price" required>
+        </div>
+
+        <div class="form-group">
+          <label for="stock">Stock Quantity</label>
+          <input type="number" id="stock" placeholder="Enter stock" required>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" required>
+            <option value="">Select Category</option>
+            <option value="Handicrafts">Handicrafts</option>
+            <option value="Home Decor">Home Decor</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Art Supplies">Art & DIY</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="save-btn">Save Product</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Product List -->
+    <section class="product-list">
+      <h2>Product List</h2>
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price (₹)</th>
+            <th>Stock</th>
+            <th>Category</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamically added rows will appear here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../JAVASCRIPT/products.js"></script>
+</body>
+</html>

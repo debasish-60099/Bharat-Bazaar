@@ -1,0 +1,136 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+}
+
+.dashboard-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 230px;
+  background-color: #03247e;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.sidebar-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.sidebar li.active a,
+.sidebar a:hover {
+  background-color: #f85402;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.top-nav {
+  display: flex;
+   background: linear-gradient(135deg, #fdfdfd, #72edf4);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top-nav h1 {
+  color: #2b2f4c;
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+}
+
+.nav-profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Search & Filter */
+.order-controls {
+  display: flex;
+  
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.order-controls input,
+.order-controls select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Table */
+.orders-section table {
+  width: 100%;
+  border-collapse: collapse;
+ background: linear-gradient(135deg, #fdfdfd, #fff7e6);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.orders-section th, 
+.orders-section td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.orders-section th {
+  background: #f4f4f4;
+}
+
+.status.pending {
+  color: #e67e22;
+  font-weight: bold;
+}
+.status.shipped {
+  color: #3498db;
+  font-weight: bold;
+}
+.status.delivered {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #c0392b;
+}

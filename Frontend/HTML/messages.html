@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages - Bharat Bazaar</title>
+  <link rel="stylesheet" href="../CSS/messages.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="sidebar-title">Bharat Bazaar</h2>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <li><a href="earnings.html">Earnings</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="messages.html">Messages</a></li>
+      <li><a href="settings.html">Settings</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Top Navbar -->
+    <nav class="top-nav">
+      <h1>Messages</h1>
+      <div class="nav-profile">
+        <img src="../IMAGES/profile_picture.jpg" alt="User Profile">
+        <span>Welcome, Seller</span>
+      </div>
+    </nav>
+
+    <!-- Messages Section -->
+    <section class="messages-container">
+      <!-- Contacts List -->
+      <div class="contacts">
+        <h2>Chats</h2>
+        <ul>
+          <li class="active">Ravi Kumar</li>
+          <li>Priya Singh</li>
+          <li>Arjun Sharma</li>
+          <li>Meena Gupta</li>
+        </ul>
+      </div>
+
+      <!-- Chat Area -->
+      <div class="chat-area">
+        <div class="chat-header">
+          <h3>Ravi Kumar</h3>
+        </div>
+        <div class="chat-box" id="chatBox">
+          <div class="message received">Hello, is this product available?</div>
+          <div class="message sent">Yes, it's available. Would you like to place an order?</div>
+          <div class="message received">Yes, can you confirm delivery time?</div>
+        </div>
+        <div class="chat-input">
+          <input type="text" id="messageInput" placeholder="Type your message...">
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../JAVASCRIPT/messages.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Dashboard - Bharat Bazaar</title>
+  <link rel="stylesheet" href="../CSS/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="sidebar-title">Bharat Bazaar</h2>
+    <ul>
+      <li class="active"><a href="#">Dashboard</a></li>
+      <li><a href="#products_page"  onclick="window.location.href='products.html'">Products</a></li>
+     <li><a href="orders.html">Orders</a></li>
+      <li><a href="earnings.html">Earnings</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="messages.html">Messages</a></li>
+      <li><a href="settings.html">Settings</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Top Navbar -->
+    <nav class="top-nav">
+      <h1>Dashboard</h1>
+      <div class="nav-profile">
+        <img src="../IMAGES/profile_picture.jpg" alt="User Profile">
+        <span>Welcome, Seller</span>
+      </div>
+    </nav>
+
+    <!-- Cards Section -->
+    <section class="cards">
+      <div class="card">
+        <h3>Total Sales</h3>
+        <p>₹ 1,20,000</p>
+      </div>
+      <div class="card">
+        <h3>Orders</h3>
+        <p>245</p>
+      </div>
+      <div class="card">
+        <h3>Earnings</h3>
+        <p>₹ 95,000</p>
+      </div>
+      <div class="card">
+        <h3>Pending Orders</h3>
+        <p>12</p>
+      </div>
+    </section>
+
+    <!-- Sales & Earnings Section -->
+     <!-- Graphs Section -->
+      <div class="charts-container">
+        <div class="chart-box">
+          <h2>Sales vs Orders</h2>
+          <canvas id="salesChart"></canvas>
+        </div>
+        <div class="chart-box">
+          <h2>Earnings Breakdown</h2>
+          <canvas id="earningsPie"></canvas>
+        </div>
+      </div>
+
+      <!-- Top Products -->
+      <div class="chart-box full-width">
+        <h2>Top Products</h2>
+        <canvas id="productsBar"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Sales vs Orders Chart
+    const ctx1 = document.getElementById('salesChart').getContext('2d');
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [
+          {
+            label: 'Sales (₹)',
+            data: [12000, 15000, 20000, 25000, 30000, 35000],
+            borderColor: '#03247e',
+            backgroundColor: 'rgba(3,36,126,0.1)',
+            tension: 0.4,
+            borderWidth: 3,
+            pointBackgroundColor: '#03247e'
+          },
+          {
+            label: 'Orders',
+            data: [30, 40, 50, 60, 70, 80],
+            borderColor: '#f85402',
+            backgroundColor: 'rgba(248,84,2,0.1)',
+            tension: 0.4,
+            borderWidth: 3,
+            pointBackgroundColor: '#f85402'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: 'top' } },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+
+    // Earnings Breakdown Pie
+    const ctx2 = document.getElementById('earningsPie').getContext('2d');
+    new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: ['Clothing', 'Home Decor', 'Handicrafts', 'Others'],
+        datasets: [{
+          data: [40, 25, 20, 15],
+          backgroundColor: ['#03247e', '#f85402', '#4caf50', '#ffcc00'],
+          borderWidth: 1
+        }]
+      },
+      options: { responsive: true }
+    });
+
+    // Top Products Bar
+    const ctx3 = document.getElementById('productsBar').getContext('2d');
+    new Chart(ctx3, {
+      type: 'bar',
+      data: {
+        labels: ['T-Shirt', 'Sofa Cover', 'Handbag', 'Wall Art', 'Lamp'],
+        datasets: [{
+          label: 'Units Sold',
+          data: [100, 80, 60, 40, 30],
+          backgroundColor: '#03247e',
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+  </script>
+</body>
+</html>

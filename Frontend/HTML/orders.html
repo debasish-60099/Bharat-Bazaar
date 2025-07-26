@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders - Bharat Bazaar</title>
+  <link rel="stylesheet" href="../CSS/orders.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+   <aside class="sidebar">
+    <h2 class="sidebar-title">Bharat Bazaar</h2>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <li><a href="earnings.html">Earnings</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="messages.html">Messages</a></li>
+      <li><a href="settings.html">Settings</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <nav class="top-nav">
+        <h1>Orders</h1>
+        <div class="nav-profile">
+          <img src="../IMAGES/profile_picture.jpg" alt="User Profile">
+          <span>Welcome, Seller</span>
+        </div>
+      </nav>
+
+      <!-- Filter & Search -->
+      <section class="order-controls">
+        <input type="text" id="searchInput" placeholder="Search orders by ID or customer name...">
+        <select id="statusFilter">
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="shipped">Shipped</option>
+          <option value="delivered">Delivered</option>
+        </select>
+      </section>
+
+      <!-- Orders Table -->
+      <section class="orders-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="ordersTable">
+            <tr data-status="pending">
+              <td>#1001</td>
+              <td>Rohit Sharma</td>
+              <td>2025-07-10</td>
+              <td class="status pending">Pending</td>
+              <td>₹1200</td>
+              <td><button class="cancel-btn">Cancel</button></td>
+            </tr>
+            <tr data-status="shipped">
+              <td>#1002</td>
+              <td>Anjali Verma</td>
+              <td>2025-07-09</td>
+              <td class="status shipped">Shipped</td>
+              <td>₹950</td>
+              <td><button class="cancel-btn">Cancel</button></td>
+            </tr>
+            <tr data-status="delivered">
+              <td>#1003</td>
+              <td>Amit Patel</td>
+              <td>2025-07-08</td>
+              <td class="status delivered">Delivered</td>
+              <td>₹1800</td>
+              <td><button class="cancel-btn">Cancel</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="../JAVASCRIPT/orders.js"></script>
+</body>
+</html>

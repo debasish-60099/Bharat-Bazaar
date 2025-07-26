@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Bharat Bazaar</title>
+  <link rel="stylesheet" href="../CSS/settings.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="sidebar-title">Bharat Bazaar</h2>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <li><a href="earnings.html">Earnings</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="messages.html">Messages</a></li>
+      <li><a href="settings.html">Settings</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Top Navbar -->
+    <nav class="top-nav">
+      <h1>Settings</h1>
+      <div class="nav-profile">
+        <img src="../IMAGES/profile_picture.jpg" alt="User Profile">
+        <span>Welcome, Seller</span>
+      </div>
+    </nav>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="profile">Profile</button>
+      <button class="tab-btn" data-tab="security">Security</button>
+      <button class="tab-btn" data-tab="payment">Payment Info</button>
+    </div>
+
+    <!-- Profile Settings -->
+    <section class="settings-section tab-content active" id="profile">
+      <h2>Profile Settings</h2>
+      <form class="settings-form">
+        <div class="profile-picture-container">
+          <img id="profilePreview" src="../IMAGES/user.png" alt="Profile Picture">
+          <label for="profileUpload" class="upload-btn">Change Picture</label>
+          <input type="file" id="profileUpload" accept="image/*" hidden>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter full name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Enter phone number">
+        </div>
+        <div class="form-group">
+          <label for="address">Business Address</label>
+          <textarea id="address" rows="3" placeholder="Enter business address"></textarea>
+        </div>
+        <button type="submit" class="save-btn">Save Changes</button>
+      </form>
+    </section>
+
+    <!-- Security Settings -->
+    <section class="settings-section tab-content" id="security">
+      <h2>Security</h2>
+      <form class="settings-form">
+        <div class="form-group">
+          <label for="password">Change Password</label>
+          <input type="password" id="password" placeholder="Enter new password">
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" placeholder="Confirm new password">
+        </div>
+        <button type="submit" class="save-btn">Update Password</button>
+      </form>
+
+      <hr class="divider">
+
+      <!-- Delete Account Section -->
+      <div class="delete-account">
+        <h3>Danger Zone</h3>
+        <p>Deleting your account will remove all your data permanently.</p>
+        <button id="deleteAccountBtn" class="delete-btn">Delete Account</button>
+      </div>
+    </section>
+
+    <!-- Payment Info -->
+    <section class="settings-section tab-content" id="payment">
+      <h2>Payment Information</h2>
+      <form class="settings-form">
+        <div class="form-group">
+          <label for="bankName">Bank Name</label>
+          <input type="text" id="bankName" placeholder="Enter bank name">
+        </div>
+        <div class="form-group">
+          <label for="accountNumber">Account Number</label>
+          <input type="text" id="accountNumber" placeholder="Enter account number">
+        </div>
+        <div class="form-group">
+          <label for="ifsc">IFSC Code</label>
+          <input type="text" id="ifsc" placeholder="Enter IFSC code">
+        </div>
+        <button type="submit" class="save-btn">Save Payment Info</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Delete Confirmation Modal -->
+  <div class="modal-overlay" id="deleteModal">
+    <div class="modal">
+      <h2>Are you sure?</h2>
+      <p>This action cannot be undone. Your account will be permanently deleted.</p>
+      <div class="modal-actions">
+        <button id="cancelDelete" class="cancel-btn">Cancel</button>
+        <button id="confirmDelete" class="delete-btn">Yes, Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../JAVASCRIPT/settings.js"></script>
+</body>
+</html>

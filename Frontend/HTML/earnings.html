@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earnings & Costs - Bharat Bazaar</title>
+  <link rel="stylesheet" href="../CSS/earnings.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="sidebar-title">Bharat Bazaar</h2>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <li><a href="earnings.html">Earnings</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="messages.html">Messages</a></li>
+      <li><a href="settings.html">Settings</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Top Navbar -->
+    <nav class="top-nav">
+      <h1>Earnings & Costs</h1>
+      <div class="nav-profile">
+        <img src="../IMAGES/profile_picture.jpg" alt="User Profile">
+        <span>Welcome, Seller</span>
+      </div>
+    </nav>
+
+    <!-- Earnings Summary -->
+    <section class="earnings-summary">
+      <div class="summary-card">
+        <h3>Total Earnings</h3>
+        <p>₹ 2,45,000</p>
+      </div>
+      <div class="summary-card">
+        <h3>Total Orders</h3>
+        <p>350</p>
+      </div>
+      <div class="summary-card">
+        <h3>Platform Fees</h3>
+        <p>₹ 0 (Zero Commission)</p>
+      </div>
+      <div class="summary-card">
+        <h3>Net Profit</h3>
+        <p>₹ 2,45,000</p>
+      </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts-section">
+      <div class="chart-box">
+        <h2>Monthly Earnings</h2>
+        <canvas id="monthlyEarningsChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h2>Cost Breakdown</h2>
+        <canvas id="costBreakdownChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="../JAVASCRIPT/earnings.js"></script>
+</body>
+</html>
